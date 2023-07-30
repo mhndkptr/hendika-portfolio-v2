@@ -156,6 +156,9 @@ nav .navbarName {
     font-weight: bold;
     text-align: center;
 }
+.about p {
+    text-align: center;
+}
 
 /* Media Queries */
 /* Laptop */
