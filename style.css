@@ -78,7 +78,7 @@ nav .navbarName {
   display: block;
   border-top: 1px solid #141517;
   background-color: #141517;
-  padding-bottom: 8%;
+  padding-bottom: 7rem;
 }
 .homeContainer {
   display: flex;
