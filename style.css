@@ -17,7 +17,6 @@ body {
   border-radius: 10%;
   display: flex;
   position: fixed;
-  z-index: 9999;
   bottom: 30px;
   right: 30px;
   display: none;
@@ -148,8 +147,7 @@ nav .navbarName {
 .about {
   background-color: rgb(24, 25, 27);
   margin: 0;
-  padding: 8rem 0;
-  /* color: #141517; */
+  padding: 7rem 0;
 }
 .aboutContainer {
   margin: 0 15%;
@@ -167,7 +165,7 @@ nav .navbarName {
 }
 .about p {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 0;
   margin-top: 1rem;
   padding: 0;
@@ -178,7 +176,7 @@ nav .navbarName {
 /* Skills Style */
 .skills {
   background-color: #141517;
-  padding: 8rem 10%;
+  padding: 7rem 10%;
 }
 .skills h1 {
   margin: 0;
@@ -218,14 +216,129 @@ nav .navbarName {
 /* Projects Style */
 .projects {
   background-color: rgb(24, 25, 27);
-  padding: 8rem 10%;
+  padding: 7rem 10%;
 }
 .projects h1 {
   margin: 0;
   padding: 0;
   text-align: center;
   font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
+.projectsCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.projectsCard {
+  border: 1px solid rgba(187, 187, 187, .5);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  transition: 300ms;
+}
+.projectsCard:hover {
+  transform: scale(1) translate(0, -8px);
+}
+.projectsCard .cardPreview {
+  width: 500px;
+}
+.projectsCard .underImg {
+  padding: 1% 5%;
+}
+.projectsCard h2 {
+  margin: 2% 0;
+  padding: 0;
+}
+.cardIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardIconLeft img {
+  width: 60px;
+}
+.cardIconRight a svg {
+  transition: 300ms;
+}
+.cardIconRight a svg:hover {
+  margin-bottom: 10px;
+  fill: #bbb;
+}
+
+/* Contact Style */
+.contact {
+  background-color: #141517;
+  padding: 7rem 10%;
+}
+.contact h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.formContainer {
+  display: flex;
+  justify-content: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.form label {
+  margin-bottom: 1rem;
+}
+.form input {
+  padding: 10px;
+  border-radius: .5rem;
+  width: 30rem;
+}
+.form textarea {
+  padding: 10px;
+  border-radius: .5rem;
+  width: 30rem;
+  resize: vertical;
+}
+.form h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.form h4.required::after {
+  content: "*";
+  color: red;
+}
+.sendBtn {
+  font-size: 1.2rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  padding: 10px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 1rem;
+  background-color: #141517;
+  width: 100px;
+  transition: 300ms;
+}
+.sendBtn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #0088ff;
+}
+
+/* Footer Style */
+footer {
+  border-top: 1px solid rgba(255, 255, 255, .5);
+  background-color: #141517;
+  text-align: center;
+  padding: 30px;
+  font-size: 1.1rem;
+  color: #bbb;
+}
+ 
 
 /* Media Queries */
 /* Laptop */
@@ -243,12 +356,15 @@ nav .navbarName {
   .logoContainer img {
     width: 100px;
   }
+  .projectsCard .cardPreview {
+    width: 450px;
+  }
 }
 
 /* Tablet */
 @media (max-width: 800px) {
   html {
-    font-size: 60%;
+    font-size: 67%;
   }
   nav {
     padding: 10px 40px;
@@ -274,6 +390,7 @@ nav .navbarName {
     flex-direction: column;
     align-items: first baseline;
     transition: 300ms;
+    z-index: 999;
   }
   nav .navbarNav a {
     margin-top: 20px;
@@ -292,15 +409,25 @@ nav .navbarName {
   .homeContainer .leftSideOverview {
     line-height: 0.6;
   }
+  .about p {
+    text-align: left;
+    margin-left: 20px;
+  }
   .logoContainer img {
     width: 90px;
+  }
+  .projectsCard .cardPreview {
+    width: 350px;
+  }
+  .cardIconLeft img {
+    width: 50px;
   }
 }
 
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
-    font-size: 50%;
+    font-size: 58%;
   }
   .homeContainer .sideImg {
     width: 300px;
@@ -311,5 +438,11 @@ nav .navbarName {
   }
   .logoContainer img {
     width: 80px;
+  }
+  .projectsCard .cardPreview {
+    width: 250px;
+  }
+  .cardIconLeft img {
+    width: 35px;
   }
 }
