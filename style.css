@@ -320,7 +320,7 @@ nav .navbarName {
   border: 1px solid white;
   border-radius: 1rem;
   background-color: #141517;
-  width: 100px;
+  width: 20%;
   transition: 300ms;
 }
 .sendBtn:hover {
