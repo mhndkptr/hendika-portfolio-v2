@@ -1,3 +1,4 @@
+// To Top Page Button Trigger
 const toTopBtn = document.querySelector(".toTopPage");
 const scrollBtnDisplay = function () {
   if (window.scrollY >= 50) {
@@ -8,6 +9,7 @@ const scrollBtnDisplay = function () {
 };
 window.addEventListener("scroll", scrollBtnDisplay);
 
+// Navbar Menu
 const navbarMenu = document.querySelector('.navbarMenu');
 const navbarNav = document.querySelector('nav .navbarNav');
 const nav = document.querySelector('nav');
