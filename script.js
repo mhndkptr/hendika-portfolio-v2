@@ -22,3 +22,31 @@ document.addEventListener('click', function(e) {
         navbarNav.classList.remove('active');
     }
 });
+
+// Animate On Scroll
+function reveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  for( let i = 0; i < reveals.length; i++ ) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 150;
+
+    if( elementTop < windowHeight - elementVisible && !reveals[i].classList.contains('onload') ) {
+      reveals[i].classList.add('active');
+    }
+  }
+}
+
+function revealOnload() {
+  const reveals = document.querySelectorAll('.reveal');
+  for( let i = 0; i < reveals.length; i++ ) {
+    if( reveals[i].classList.contains('onload') ) {
+      reveals[i].classList.add('active');
+    } else {
+      reveals[i].classList.remove('active');
+    }
+  }
+}
+
+window.addEventListener('load', revealOnload);
+window.addEventListener('scroll', reveal);

@@ -8,7 +8,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 1.2rem;
   color: white;
-  background-color: red;
+  background-color: #141517;
 }
 
 /* To Top Page Style */
@@ -445,4 +445,17 @@ footer {
   .cardIconLeft img {
     width: 35px;
   }
+}
+
+/* Animate On Scroll */
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
 }
